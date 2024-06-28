@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap';
 
