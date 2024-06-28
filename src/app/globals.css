@@ -1,6 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0px;
+  overflow: hidden; /* Hide scrollbars */
+  cursor: wait;
+}
 
-body{
-    margin: 0px;
-    overflow: hidden; /* Hide scrollbars */
-    cursor: wait;
+.slick-slide > div {
+  margin: 0 10px;
 }
