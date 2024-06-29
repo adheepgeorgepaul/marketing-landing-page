@@ -7,38 +7,46 @@ import Image from "next/image";
 const slider1 = [
   {
     color: "#e3e5e7",
-    src: "c2.jpg",
+    src: "tote.jpg",
   },
   {
     color: "#d6d7dc",
-    src: "decimal.jpg",
+    src: "totebag.jpg",
   },
   {
     color: "#e3e3e3",
-    src: "funny.jpg",
+    src: "preloved.jpg",
   },
   {
     color: "#21242b",
-    src: "google.jpg",
+    src: "tram-rain.jpg",
+  },
+  {
+    color: "#21242b",
+    src: "market.jpg",
   },
 ];
 
 const slider2 = [
   {
     color: "#d4e3ec",
-    src: "maven.jpg",
+    src: "pigeon.jpg",
   },
   {
     color: "#e5e0e1",
-    src: "panda.jpg",
+    src: "zebra-cross.jpg",
   },
   {
     color: "#d7d4cf",
-    src: "powell.jpg",
+    src: "play-melancholy.jpg",
   },
   {
     color: "#e1dad6",
-    src: "wix.jpg",
+    src: "car-aswin.jpg",
+  },
+  {
+    color: "#21242b",
+    src: "sea-crow.jpg",
   },
 ];
 
@@ -54,7 +62,7 @@ export default function index() {
   const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
 
   return (
-    <div ref={container} className={styles.slidingImages}>
+    <div id="work-section" ref={container} className={styles.slidingImages}>
       <motion.div style={{ x: x1 }} className={styles.slider}>
         {slider1.map((project, index) => {
           return (

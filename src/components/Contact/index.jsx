@@ -5,6 +5,8 @@ import Rounded from "../../common/RoundedButton";
 import { useRef } from "react";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
+import { openLinkInNewTab } from "@/utils/common";
+import { SAINT_INSTAGRAM_URL, SOURAV_LINKEDIN_URL } from "@/constants/common";
 
 export default function index() {
   const container = useRef(null);
@@ -21,7 +23,11 @@ export default function index() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/background.jpg`} />
+              <Image
+                fill={true}
+                alt={"image"}
+                src={`/images/sourav_mirror_closeup.jpg`}
+              />
             </div>
             <h2>{` Let's work `}</h2>
           </span>
@@ -47,14 +53,14 @@ export default function index() {
         </div>
         <div className={styles.nav}>
           <Rounded>
-            <p>info@dennissnellenberg.com</p>
+            <p>itssaiint.sourav@gmail.com</p>
           </Rounded>
           <Rounded>
-            <p>+31 6 27 84 74 30</p>
+            <p>+91 73561 91036</p>
           </Rounded>
         </div>
         <div className={styles.info}>
-          <div>
+          {/* <div>
             <span>
               <h3>Version</h3>
               <p>2022 © Edition</p>
@@ -63,22 +69,21 @@ export default function index() {
               <h3>Version</h3>
               <p>11:49 PM GMT+2</p>
             </span>
-          </div>
-          <div>
+          </div> */}
+          <div id="contact-section">
             <span>
               <h3>socials</h3>
               <Magnetic>
-                <p>Awwwards</p>
+                <p onClick={() => openLinkInNewTab(SAINT_INSTAGRAM_URL)}>
+                  Instagram
+                </p>
               </Magnetic>
             </span>
+
             <Magnetic>
-              <p>Instagram</p>
-            </Magnetic>
-            <Magnetic>
-              <p>Dribbble</p>
-            </Magnetic>
-            <Magnetic>
-              <p>Linkedin</p>
+              <p onClick={() => openLinkInNewTab(SOURAV_LINKEDIN_URL)}>
+                Linkedin
+              </p>
             </Magnetic>
           </div>
         </div>

@@ -48,15 +48,23 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      {/* <Image src="/images/background.jpg" fill={true} alt="background" /> */}
-      <div className="bg-black w-full h-[2500px]"></div>
+      <Image
+        src="/images/sourav_mirror_background.jpg"
+        fill={true}
+        alt="background"
+      />
+      {/* <div className="bg-black w-full h-[2500px]"></div> */}
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>Social Media Coordinator -</p>
           <p ref={secondText}>Social Media Coordinator -</p>
         </div>
       </div>
-      <div data-scroll data-scroll-speed={0.1} className={styles.description}>
+      <div
+        data-scroll
+        data-scroll-speed={0.1}
+        className={styles.description}
+      >
         <svg
           width="9"
           height="9"

@@ -7,22 +7,24 @@ import gsap from "gsap";
 import Image from "next/image";
 import Rounded from "../../common/RoundedButton";
 import { useRouter } from "next/navigation";
+import { SAINT_INSTAGRAM_URL } from "@/constants/common";
+import { openLinkInNewTab } from "@/utils/common";
 
 const projects = [
   {
     title: "Services Offered",
-    src: "officestudio.png",
+    src: "totebag.jpg",
     color: "#8C8C8C",
   },
   {
-    title: "Projects",
-    src: "locomotive.png",
+    title: "Work",
+    src: "preloved.jpg",
     color: "#EFE8D3",
   },
 
   {
     title: "Art Gallery",
-    src: "c2montreal.png",
+    src: "pigeon.jpg",
     color: "#000000",
   },
 ];
@@ -101,13 +103,9 @@ export default function Home() {
     setModal({ active, index });
   };
 
-  function openLinkInNewTab(url) {
-    window.open(url, "_blank");
-  }
-
   const onProjectClick = (project) => {
     if (project.title === "Art Gallery") {
-      openLinkInNewTab("https://www.instagram.com/itssaiint/");
+      openLinkInNewTab(SAINT_INSTAGRAM_URL);
     }
   };
 
@@ -132,7 +130,7 @@ export default function Home() {
         })}
       </div>
       <Rounded>
-        <p>More work</p>
+        <p>View work</p>
       </Rounded>
       <>
         <motion.div
